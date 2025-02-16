@@ -1,131 +1,177 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>Page 1</title>
-    <link rel="stylesheet" href="css/nicepage.css" media="screen">
-<link rel="stylesheet" href="css/index.css" media="screen">
-    <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 7.3.1, nicepage.com">
-    <meta name="referrer" content="origin">
-    
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": ""
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Page 1">
-    <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Page-1.html" data-home-page-title="Page 1" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
-    <section class="u-clearfix u-section-1" id="block-2">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h4 class="u-align-center u-custom-font u-font-georgia u-text u-text-default u-text-1">Добавление продукта </h4>
-        <div class="u-align-center u-form u-form-1">
-          
-          <form method="post" action="/index00" source="email" name="form" style="padding: 10px;" enctype="multipart/form-data">
-            <div class="u-form-group u-form-select u-label-top u-form-group-1">
-                <input type="hidden" th:value="${key}" name="type">
-                <label class="u-label u-label-1">Choose the category</label>
-                <div class="u-form-select-wrapper">
-                    <select id="select-202f" name="select-1" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-1">
-                        <option value="Item 1" data-calc="">Item 1</option>
-                        <option value="Item 2" data-calc="">Item 2</option>
-                        <option value="Item 3" data-calc="">Item 3</option>
-                    </select>
-                    <svg class="u-caret u-caret-svg u-text-grey-70" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve">
-                        <polygon class="st0" points="8,12 2,4 14,4"></polygon>
-                    </svg>
-                </div>
-            </div>
-        
-            <p class="u-form-group u-form-text u-text u-text-2">Add a new category</p>
-            <div class="u-form-group u-form-name u-label-top">
-                <label class="u-label u-label-2">Name of Category</label>
-                <input type="text" placeholder="Enter a name of new category" id="name-c47a" name="category" th:value="${category}" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-2">
-            </div>
-            <div class="u-form-group u-label-top">
-                <label class="u-label u-label-3">Image</label>
-                <input type="file" id="image-category" name="imageOfCategory" th:value="${imageOfCategory}" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-3" accept="image/*">
-            </div>
-        
-            <p class="u-form-group u-form-text u-text u-text-3">Enter the info about exact product</p>
-            <div class="u-form-group u-label-top">
-                <label class="u-label u-label-4">Name of Product</label>
-                <input placeholder="Enter the name of exact product" id="message-c47a" name="nameOfProduct" th:value="${nameOfProduct}" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-4" required="required" type="text">
-            </div>
-            <div class="u-form-group u-label-top u-form-group-7">
-                <label class="u-label u-label-5">Image of product</label>
-                <input type="file" id="image-product" name="imageOfProduct" th:value="${imageOfProduct}" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-5" accept="image/*">
-            </div>
-            <div class="u-form-group u-label-top u-form-group-8">
-                <label class="u-label u-label-6">Price of product</label>
-                <input type="text" placeholder="Enter the price of exact product" id="text-9fbf" name="price" th:text="${price}" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-6">
-            </div>
-            <div class="u-form-group u-form-message u-label-top u-form-group-9">
-                <label class="u-label u-label-7">Composition of Product</label>
-                <textarea placeholder="Enter a composition of exact Product" id="text-3a0b" name="composition" th:text="${composition}" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-7"></textarea>
-            </div>
-            <div class="u-form-group u-form-textarea u-label-top u-form-group-10">
-                <label class="u-label u-label-8">Nutritional value</label>
-                <textarea id="textarea-5f85" name="nutritionalValue" th:text="${nutritionalValue}" class="u-border-2 u-border-black u-input u-input-rectangle u-radius u-text-grey-70 u-input-8" required="" placeholder="Enter nutritional value"></textarea>
-            </div>
-        
-            <div class="u-align-center u-form-group u-form-submit u-label-top">
-                <input type="submit" value="submit" class="u-form-control-hidden">
-                <a href="#" class="u-active-palette-2-base u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-2-light-2 u-radius u-btn-1">Submit</a>
-            </div>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавление продукта</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    h1, h3 {
+      text-align: center;
+      font-weight: 600;
+      color: #333;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #444;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-top: 8px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 14px;
+      background-color: #fdfdfd;
+      transition: 0.3s;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+    button {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      padding: 14px;
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    button:hover {
+      background: linear-gradient(135deg, #0056b3, #003f7f);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+    }
 
+    th, td {
+      word-wrap: break-word;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      max-width: 200px; /* Adjust as needed */
+    }
+
+    td img {
+      max-width: 100px; /* Limits image size */
+      height: auto;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007bff; /* Blue color */
+      color: white; /* White text */
+      border: 1px solid #ddd; /* Border around header cells */
+      padding: 10px; /* Padding for better spacing */
+      text-align: center; /* Center the text */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Добавление продукта</h1>
+  <form method="post" action="/index" name="form" enctype="multipart/form-data">
+    <input type="hidden" th:value="${key}" name="type">
+    <label for="category">CHOOSE THE CATEGORY</label>
+    <select id="category">
+      <option>Item 1</option>
+      <option>Item 2</option>
+      <option>Item 3</option>
+    </select>
+
+    <h3>Add a new category</h3>
+    <label for="new-category">NAME OF CATEGORY</label>
+    <input type="text" id="new-category" name="category" th:value="${category}" placeholder="Enter a name of new category">
+    <label for="category-image">IMAGE</label>
+    <input type="file" id="category-image" name="imageOfCategory" th:value="${imageOfCategory}">
+
+    <h3>Enter the info about exact product</h3>
+    <label for="product-name">NAME OF PRODUCT</label>
+    <input type="text" id="product-name" placeholder="Enter the name of exact product" name="nameOfProduct" th:value="${nameOfProduct}" required>
+    <label for="product-image">IMAGE OF PRODUCT</label>
+    <input type="file" id="product-image" name="imageOfProduct" th:value="${imageOfProduct}" required>
+    <label for="product-price">PRICE OF PRODUCT</label>
+    <input type="text" id="product-price" placeholder="Enter the price of exact product" name="price" th:text="${price}" required>
+    <label for="product-composition">COMPOSITION OF PRODUCT</label>
+    <textarea id="product-composition" placeholder="Enter a composition of exact Product" name="composition" th:text="${composition}" required></textarea>
+    <label for="nutritional-value">NUTRITIONAL VALUE</label>
+    <textarea id="nutritional-value" placeholder="Enter nutritional value" name="nutritionalValue" th:text="${nutritionalValue}" required></textarea>
+
+    <button id="submit">Submit</button>
+  </form>
+</div>
+<div>
+  <table border="1">
+    <tr>
+      <th>№</th>
+      <th>Category</th>
+      <th>Image Of Category</th>
+      <th>Name Of Product</th>
+      <th>Image Of Product</th>
+      <th>Price</th>
+      <th>Composition</th>
+      <th>Nutritional Value</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr th:each="str, iterStat : ${keyList}">
+      <td th:text="${iterStat.count}"></td> <!-- Номер строки начиная с 1 -->
+      <td th:text="${categoryList[iterStat.index]}"></td> <!-- Категория продукта -->
+      <td th:text="${imageOfCategoryList[iterStat.index]}"></td>
+      <td th:text="${nameOfProductList[iterStat.index]}"></td> <!-- Название продукта -->
+      <td th:text="${imageOfProductList[iterStat.index]}"></td>
+      <td th:text="${priceList[iterStat.index]}"></td> <!-- Цена продукта -->
+      <td th:text="${compositionList[iterStat.index]}"></td> <!-- Состав продукта -->
+      <td th:text="${nutritionalValueList[iterStat.index]}"></td> <!-- Пищевая ценность -->
+      <td>
+        <form method="post" action="/updateProduct">
+          <input type="hidden" th:value="${keyList[iterStat.index]}" name="update_key">
+          <input type="submit" value="Update">
         </form>
-        </div>
-      </div>
-        <div style="overflow-x:auto;">
-            <table border="1">
-                <tr>
-                    <th>№</th>
-                    <th>Category</th>
-                    <th>Image Of Category</th>
-                    <th>Name Of Product</th>
-                    <th>Image Of Product</th>
-                    <th>Price</th>
-                    <th>Composition</th>
-                    <th>Nutritional Value</th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                </tr>
-                <tr th:each="str, iterStat : ${keyList}">
-                    <td th:text="${iterStat.count}"></td> <!-- Номер строки начиная с 1 -->
-                    <td th:text="${categoryList[iterStat.index]}"></td> <!-- Категория продукта -->
-                    <td th:text="${imageOfCategoryList[iterStat.index]}"></td>
-                    <td th:text="${nameOfProductList[iterStat.index]}"></td> <!-- Название продукта -->
-                    <td th:text="${imageOfProductList[iterStat.index]}"></td>
-                    <td th:text="${priceList[iterStat.index]}"></td> <!-- Цена продукта -->
-                    <td th:text="${compositionList[iterStat.index]}"></td> <!-- Состав продукта -->
-                    <td th:text="${nutritionalValueList[iterStat.index]}"></td> <!-- Пищевая ценность -->
-                    <td>
-                        <form method="post" action="/updateProduct">
-                            <input type="hidden" th:value="${keyList[iterStat.index]}" name="update_key">
-                            <input type="submit" value="Update">
-                        </form>
-                    </td>
-                    <td>
-                        <form method="post" action="/deleteProduct">
-                            <input type="hidden" th:value="${keyList[iterStat.index]}" name="delete_key">
-                            <input type="submit" value="Delete">
-                        </form>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
-    <!--                    <td>-->
-    <!--                        <img th:src="${str.productImage}" alt="Product Image" style="max-width: 100px; max-height: 100px;"/>-->
-    <!--                    </td>-->
-</body></html>
+      </td>
+      <td>
+        <form method="post" action="/deleteProduct">
+          <input type="hidden" th:value="${keyList[iterStat.index]}" name="delete_key">
+          <input type="submit" value="Delete">
+        </form>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

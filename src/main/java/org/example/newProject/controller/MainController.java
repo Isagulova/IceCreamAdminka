@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
 
 @Controller
@@ -28,7 +27,7 @@ public class MainController {
         return "index";
     }
 
-    @PostMapping("/index00")
+    @PostMapping("/index")
     public String postMain(
             @RequestParam(defaultValue = "none") String type,
             @RequestParam("category") String category,
