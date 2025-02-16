@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8ffbad4b-529b-491f-8829-efb42d114d65" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/nicepage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/nicepage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/modul/ThymleafUIModul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/modul/ThymleafUIModul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/services/modul/ThymleafUIModul.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/services/modul/ThymleafUIModul.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +113,7 @@
       <workItem from="1739511262177" duration="108000" />
       <workItem from="1739683297935" duration="15981000" />
       <workItem from="1739714318870" duration="475000" />
-      <workItem from="1739714800652" duration="8018000" />
+      <workItem from="1739714800652" duration="11937000" />
     </task>
     <servers />
   </component>

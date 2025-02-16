@@ -4,7 +4,9 @@ import org.example.newProject.services.FirebaseServices;
 import org.springframework.ui.Model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
@@ -66,6 +68,12 @@ public class ThymleafUIModul {
             model.addAttribute("priceList", priceList);
             model.addAttribute("compositionList", compositionList);
             model.addAttribute("nutritionalValueList", nutritionalValueList);
+
+
+            Set<String> uniqueCategoriesSet = new HashSet<>(categoryList);
+            List<String> uniqueCategoriesList = new ArrayList<>(uniqueCategoriesSet);
+            model.addAttribute("uniqueCategoriesList", uniqueCategoriesList);
+
         } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }

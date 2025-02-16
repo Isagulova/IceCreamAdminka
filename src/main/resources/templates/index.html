@@ -107,12 +107,13 @@
   <h1>Добавление продукта</h1>
   <form method="post" action="/index" name="form" enctype="multipart/form-data">
     <input type="hidden" th:value="${key}" name="type">
+
     <label for="category">CHOOSE THE CATEGORY</label>
-    <select id="category">
-      <option>Item 1</option>
-      <option>Item 2</option>
-      <option>Item 3</option>
+    <select id="category" name="category">
+      <option value="" disabled selected>Select a category</option>
+      <option th:each="category : ${uniqueCategoriesList}" th:value="${category}" th:text="${category}"></option>
     </select>
+
 
     <h3>Add a new category</h3>
     <label for="new-category">NAME OF CATEGORY</label>
