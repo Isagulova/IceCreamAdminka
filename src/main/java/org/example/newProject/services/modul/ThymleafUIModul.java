@@ -25,7 +25,7 @@ public class ThymleafUIModul {
             List<String> imageOfCategoryList = new ArrayList<>();
             List<String> nameOfProductList = new ArrayList<>();
             List<String> imageOfProductList = new ArrayList<>();
-            List<String> price = new ArrayList<>();
+            List<String> priceList = new ArrayList<>();
             List<String> compositionList = new ArrayList<>();
             List<String> nutritionalValueList = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class ThymleafUIModul {
                         imageOfProductList.add(all.get(i));
                         break;
                     case 5:
-                        price.add(all.get(i));
+                        priceList.add(all.get(i));
                         break;
                     case 6:
                         compositionList.add(all.get(i));
@@ -63,7 +63,7 @@ public class ThymleafUIModul {
             model.addAttribute("imageOfCategoryList", imageOfCategoryList);
             model.addAttribute("nameOfProductList", nameOfProductList);
             model.addAttribute("imageOfProductList", imageOfProductList);
-            model.addAttribute("priceList", price);
+            model.addAttribute("priceList", priceList);
             model.addAttribute("compositionList", compositionList);
             model.addAttribute("nutritionalValueList", nutritionalValueList);
         } catch (InterruptedException | ExecutionException e) {
@@ -81,7 +81,7 @@ public class ThymleafUIModul {
             List<String> imageOfCategoryList = new ArrayList<>();
             List<String> nameOfProductList = new ArrayList<>();
             List<String> imageOfProductList = new ArrayList<>();
-            List<String> price = new ArrayList<>();
+            List<String> priceList = new ArrayList<>();
             List<String> compositionList = new ArrayList<>();
             List<String> nutritionalValueList = new ArrayList<>();
 
@@ -103,7 +103,7 @@ public class ThymleafUIModul {
                         imageOfProductList.add(all.get(i));
                         break;
                     case 5:
-                        price.add(all.get(i));
+                        priceList.add(all.get(i));
                         break;
                     case 6:
                         compositionList.add(all.get(i));
@@ -122,6 +122,7 @@ public class ThymleafUIModul {
                     model.addAttribute("nameOfProduct", nameOfProductList.get(i));
                     model.addAttribute("imageOfProduct", imageOfProductList.get(i));
                     model.addAttribute("imageOfProduct", imageOfProductList.get(i));
+                    model.addAttribute("price", priceList.get(i));
                     model.addAttribute("composition", compositionList.get(i));
                     model.addAttribute("nutritionalValue", nutritionalValueList.get(i));
                     break;
@@ -133,7 +134,7 @@ public class ThymleafUIModul {
             model.addAttribute("imageOfCategoryList", imageOfCategoryList);
             model.addAttribute("nameOfProductList", nameOfProductList);
             model.addAttribute("imageOfProductList", imageOfProductList);
-            model.addAttribute("priceList", price);
+            model.addAttribute("priceList", priceList);
             model.addAttribute("compositionList", compositionList);
             model.addAttribute("nutritionalValueList", nutritionalValueList);
 

@@ -50,17 +50,17 @@
         <!--            <scope>test</scope>-->
         <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>com.cloudinary</groupId>-->
-<!--            <artifactId>cloudinary-http44</artifactId>-->
-<!--            <version>1.33.0</version> &lt;!&ndash; Use the latest version available &ndash;&gt;-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.cloudinary</groupId>
+            <artifactId>cloudinary-http44</artifactId>
+            <version>1.33.0</version> <!-- Use the latest version available -->
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.cloudinary</groupId>-->
-<!--            <artifactId>cloudinary-http44</artifactId>-->
-<!--            <version>1.33.0</version> &lt;!&ndash; Use the latest version available &ndash;&gt;-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.cloudinary</groupId>
+            <artifactId>cloudinary-http44</artifactId>
+            <version>1.33.0</version> <!-- Use the latest version available -->
+        </dependency>
 
         <dependency>
             <groupId>com.google.firebase</groupId>
