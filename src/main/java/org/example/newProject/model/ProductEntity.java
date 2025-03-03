@@ -2,22 +2,18 @@ package org.example.newProject.model;
 
 public class ProductEntity {
     private String key;
-    private String category;
-    private String imageOfCategory;
-    private String nameOfProduct;
-    private String imageOfProduct;
-    private String price;
-    private String composition;
-    private String nutritionalValue;
+    private String productCategory;
+    private String productName;
+    private String productImage;
+    private Double productPrice;
+    private String productDescription;
 
-    public ProductEntity(String category, String imageOfCategory, String nameOfProduct, String imageOfProduct, String price, String composition, String nutritionalValue) {
-        this.category = category;
-        this.imageOfCategory = imageOfCategory;
-        this.nameOfProduct = nameOfProduct;
-        this.imageOfProduct = imageOfProduct;
-        this.price = price;
-        this.composition = composition;
-        this.nutritionalValue = nutritionalValue;
+    public ProductEntity(String productCategory, String productName, String productImage, Double productPrice, String productDescription) {
+        this.productCategory = productCategory;
+        this.productName = productName;
+        this.productImage = productImage;
+        this.productPrice = productPrice;
+        this.productDescription = productDescription;
     }
 
     public String getKey() {
@@ -28,59 +24,43 @@ public class ProductEntity {
         this.key = key;
     }
 
-    public String getCategory() {
-        return category;
+    public String getProductCategory() {
+        return productCategory;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
     }
 
-    public String getImageOfCategory() {
-        return imageOfCategory;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setImageOfCategory(String imageOfCategory) {
-        this.imageOfCategory = imageOfCategory;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public String getNameOfProduct() {
-        return nameOfProduct;
+    public String getProductImage() {
+        return productImage;
     }
 
-    public void setNameOfProduct(String nameOfProduct) {
-        this.nameOfProduct = nameOfProduct;
+    public void setProductImage(String productImage) {
+        this.productImage = productImage;
     }
 
-    public String getImageOfProduct() {
-        return imageOfProduct;
+    public Double getProductPrice() {
+        return productPrice;
     }
 
-    public void setImageOfProduct(String imageOfProduct) {
-        this.imageOfProduct = imageOfProduct;
+    public void setProductPrice(Double productPrice) {
+        this.productPrice = productPrice;
     }
 
-    public String getPrice() {
-        return price;
+    public String getProductDescription() {
+        return productDescription;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getComposition() {
-        return composition;
-    }
-
-    public void setComposition(String composition) {
-        this.composition = composition;
-    }
-
-    public String getNutritionalValue() {
-        return nutritionalValue;
-    }
-
-    public void setNutritionalValue(String nutritionalValue) {
-        this.nutritionalValue = nutritionalValue;
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
     }
 }

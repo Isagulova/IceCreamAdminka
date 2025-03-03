@@ -5,10 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ffbad4b-529b-491f-8829-efb42d114d65" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/model/CategoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index22.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/NewAdminkaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/IceCreamAdminkaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/model/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/model/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/FirebaseServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/FirebaseServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/modul/ThymleafUIModul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/modul/ThymleafUIModul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/NewAdminkaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/model/ProductEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/model/ProductEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/services/modul/ThymleafUIModul.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/services/modul/ThymleafUIModul.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/nicepage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/nicepage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,32 +51,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.KtmuGramApplication.executor": "Run",
-    "Spring Boot.NewAdminkaApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/burulsun_isagulova01/Desktop/Adminka/NewAdminka/.idea",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.IceCreamAdminkaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.KtmuGramApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NewAdminkaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/burulsun_isagulova01/Desktop/Adminka/IceCreamAdminka&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.idea" />
@@ -67,17 +86,10 @@
       <recent name="$PROJECT_DIR$/src/main/resources/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.NewAdminkaApplication">
-    <configuration name="KtmuGramApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.IceCreamAdminkaApplication">
+    <configuration name="IceCreamAdminkaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="IceCream" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ktmu.ktmu_gram.KtmuGramApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NewAdminkaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="IceCream" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.newProject.NewAdminkaApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.newProject.IceCreamAdminkaApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.newProject.*" />
@@ -88,9 +100,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KtmuGramApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="IceCream" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ktmu.ktmu_gram.KtmuGramApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NewAdminkaApplication" />
+        <item itemvalue="Spring Boot.IceCreamAdminkaApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -113,11 +132,33 @@
       <workItem from="1739511262177" duration="108000" />
       <workItem from="1739683297935" duration="15981000" />
       <workItem from="1739714318870" duration="475000" />
-      <workItem from="1739714800652" duration="11937000" />
+      <workItem from="1739714800652" duration="12708000" />
+      <workItem from="1739766983788" duration="2076000" />
+      <workItem from="1739939603352" duration="615000" />
+      <workItem from="1739962633087" duration="565000" />
+      <workItem from="1739971086141" duration="1216000" />
+      <workItem from="1740499036203" duration="433000" />
+      <workItem from="1740583374252" duration="793000" />
+      <workItem from="1740725933604" duration="2265000" />
+      <workItem from="1740745647028" duration="4144000" />
+      <workItem from="1740811406925" duration="24048000" />
+      <workItem from="1740961196670" duration="4335000" />
+      <workItem from="1740965557129" duration="693000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

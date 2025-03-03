@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NewAdminkaApplication {
+public class IceCreamAdminkaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NewAdminkaApplication.class, args);
+        SpringApplication.run(IceCreamAdminkaApplication.class, args);
     }
 
 }

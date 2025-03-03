@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E5E7EB;
+            color: #333;
+        }
+        aside {
+            background-color: #000;
+            color: white;
+            width: 280px;
+            padding: 20px;
+        }
+        aside h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        aside a {
+            display: block;
+            padding: 10px 15px;
+            color: #bbb;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+        aside a:hover {
+            background-color: #1D2327;
+            color: white;
+        }
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .button-primary {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .button-primary:hover {
+            background-color: #003f7f;
+        }
+
+        .table-header {
+            background-color: #F3F4F6;
+            font-weight: 600;
+        }
+        .table-row {
+            background-color: white;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .button-update {
+            background-color: #6B7280;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .button-update:hover {
+            background-color: #4B5563;
+            transform: translateY(-2px);
+        }
+        .button-delete {
+            background-color: #B91C1C;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .button-delete:hover {
+            background-color: #991B1B;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+<div class="flex h-screen">
+    <aside>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="index">Categories</a>
+            <a href="products">Products</a>
+            <a href="#">Statistics</a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 p-8 bg-gray-100">
+        <header class="mb-6">Adding New Product</header>
+        <section class="bg-white p-6 shadow-md rounded-lg mb-8">
+            <form method="post" action="/products" id="productForm" class="space-y-6" enctype="multipart/form-data">
+                <input type="hidden" th:value="${keyProduct}" name="type">
+                <input type="text" id="productName" name="productName" th:value="${productName}" placeholder="Product Name" class="border p-2 w-full rounded" required>
+                <select id="productCategory" name="productCategory" class="border p-2 w-full rounded" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option th:each="category : ${uniqueCategoriesList}" th:value="${category}" th:text="${category}"></option>
+                </select>
+                <input type="file" id="productImage" name="productImage" th:value="${productImage}" class="border p-2 w-full rounded" required>
+                <input type="number" id="productPrice" name="productPrice" th:value="${productPrice}" placeholder="Price" class="border p-2 w-full rounded" required>
+                <textarea id="productDescription" name="productDescription" th:text="${productDescription}" placeholder="Description" class="border p-2 w-full rounded" required></textarea>
+                <button id="submit" class="button-primary">Add New Product</button>
+            </form>
+        </section>
+
+        <section class="bg-white p-6 shadow-md rounded-lg">
+            <h3 class="text-2xl font-semibold mb-4">All Products</h3>
+            <table id="productTable" class="w-full text-left border-collapse">
+                <thead class="table-header">
+                <tr>
+                    <th class="py-3 px-6">№</th>
+                    <th class="py-3 px-6">Product Name</th>
+                    <th class="py-3 px-6">Category</th>
+                    <th class="py-3 px-6">Image</th>
+                    <th class="py-3 px-6">Price</th>
+                    <th class="py-3 px-6">Description</th>
+                    <th class="py-3 px-6">Update</th>
+                    <th class="py-3 px-6">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="product, iterStat : ${nameOfProductList}">
+                    <td th:text="${iterStat.count}"></td> <!-- Номер строки -->
+                    <td th:text="${product}"></td> <!-- Название продукта -->
+                    <td th:text="${categoryOfProductList[iterStat.index]}"></td> <!-- Категория продукта -->
+                    <td>
+                        <img th:src="${imageOfProductList[iterStat.index]}" alt="Product Image" class="w-16 h-16 object-cover">
+                    </td> <!-- Изображение продукта -->
+                    <td th:text="${priceList[iterStat.index]}"></td> <!-- Цена продукта -->
+                    <td th:text="${descriptionList[iterStat.index]}"></td> <!-- Описание продукта -->
+                    <td>
+                        <form method="post" action="/updateProduct">
+                            <input type="hidden" th:value="${keyListProducts[iterStat.index]}" name="updateProduct_key">
+                            <input type="submit" value="Update" class="btn btn-primary">
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" action="/deleteProduct">
+                            <input type="hidden" th:value="${keyListProducts[iterStat.index]}" name="deleteProduct_key">
+                            <input type="submit" value="Delete" class="btn btn-danger">
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+</div>
+</body>
+</html>

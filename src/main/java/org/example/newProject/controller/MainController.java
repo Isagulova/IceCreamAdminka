@@ -1,5 +1,6 @@
 package org.example.newProject.controller;
 
+import org.example.newProject.model.CategoryEntity;
 import org.example.newProject.model.ProductEntity;
 import org.example.newProject.services.CloudinaryService;
 import org.example.newProject.services.FirebaseServices;
@@ -16,61 +17,113 @@ import java.io.IOException;
 
 @Controller
 public class MainController {
-    private FirebaseServices productFirebase = new FirebaseServices("ice_cream");
-    //    private final FirebaseServices announcementsFirebase = new FirebaseServices("announcements");
+    private FirebaseServices categoryFirebase = new FirebaseServices("categories");
+    private FirebaseServices productFirebase = new FirebaseServices("products");
+    //    private FirebaseServices categoryFirebase = new FirebaseServices("ice_cream/categories");
+//    private FirebaseServices productFirebase = new FirebaseServices("ice_cream/products");
     private ThymleafUIModul thymleafUIModul;
 
     @GetMapping("/index")
     public String getMain(Model model) {
         thymleafUIModul = new ThymleafUIModul(model);
-        thymleafUIModul.showData(productFirebase);
+        thymleafUIModul.showCategories(categoryFirebase);
         return "index";
+    }
+
+    @GetMapping("/products")
+    public String getProducts(Model model) {
+        thymleafUIModul = new ThymleafUIModul(model);
+        thymleafUIModul.showProducts(productFirebase);
+        thymleafUIModul.showCategories(productFirebase);
+        return "products";
     }
 
     @PostMapping("/index")
     public String postMain(
             @RequestParam(defaultValue = "none") String type,
-            @RequestParam("category") String category,
-            @RequestParam("imageOfCategory") MultipartFile imageOfCategory,
-            @RequestParam("nameOfProduct") String nameOfProduct,
-            @RequestParam("imageOfProduct") MultipartFile imageOfProduct,
-            @RequestParam("price") String price,
-            @RequestParam("composition") String composition,
-            @RequestParam("nutritionalValue") String nutritionalValue,
+            @RequestParam("categoryName") String categoryName,
+            @RequestParam("categoryImage") MultipartFile categoryImage,
             Model model)
             throws IOException {
 
         CloudinaryService cloudinaryService = new CloudinaryService();
 
-        String imageLinkOfCategory = cloudinaryService.uploadCloudinary(FileConverter.convertMultipartFileToFile(imageOfCategory));
-        String imageLinkOfProduct = cloudinaryService.uploadCloudinary(FileConverter.convertMultipartFileToFile(imageOfProduct));
+        String imageLinkOfCategory = cloudinaryService.uploadCloudinary(FileConverter.convertMultipartFileToFile(categoryImage));
 
-        // Создаем объект AnnouncementsEntity с несколькими изображениями
-        ProductEntity productEntity = new ProductEntity(category, imageLinkOfCategory, nameOfProduct, imageLinkOfProduct, price, composition, nutritionalValue);
+        CategoryEntity categoryEntity = new CategoryEntity(categoryName, imageLinkOfCategory);
         System.out.println(type);
 
         if (type.equals("none")) {
-            productFirebase.saveMain(productEntity);
+            categoryFirebase.saveCategory(categoryEntity);
         } else {
-            productFirebase.updateByKey(type, productEntity);
+            categoryFirebase.updateCategoryByKey(type, categoryEntity);
         }
 
+//        categoryFirebase.saveCategory(categoryEntity);
+
         thymleafUIModul = new ThymleafUIModul(model);
-        thymleafUIModul.showData(productFirebase);
+        thymleafUIModul.showCategories(categoryFirebase);
         return "index";
+    }
+
+    @PostMapping("/products")
+    public String postProducts(
+            @RequestParam(defaultValue = "none1") String type,
+            @RequestParam("productName") String productName,
+            @RequestParam("productCategory") String productCategory,
+            @RequestParam("productImage") MultipartFile productImage,
+            @RequestParam("productPrice") Double productPrice,
+            @RequestParam("productDescription") String productDescription,
+            Model model)
+            throws IOException {
+
+        CloudinaryService cloudinaryService = new CloudinaryService();
+
+        String imageLinkOfProduct = cloudinaryService.uploadCloudinary(FileConverter.convertMultipartFileToFile(productImage));
+
+        ProductEntity productEntity = new ProductEntity(productName, productCategory, imageLinkOfProduct, productPrice, productDescription);
+        System.out.println(type);
+
+        if (type.equals("none1")) {
+            productFirebase.saveProduct(productEntity);
+        } else {
+            productFirebase.updateProductByKey(type, productEntity);
+        }
+
+//        productFirebase.saveProduct(productEntity);
+
+        thymleafUIModul = new ThymleafUIModul(model);
+        thymleafUIModul.showProducts(productFirebase);
+        return "products";
+    }
+
+
+    @PostMapping("/updateCategory")
+    public String updateCategory(@RequestParam("updateCategory_key") String updateKeyCategory, Model model) {
+        thymleafUIModul = new ThymleafUIModul(model);
+        thymleafUIModul.updateShowCategory(categoryFirebase, updateKeyCategory);
+        System.out.println("keyList11");
+        return "index";
+    }
+
+    @PostMapping("/deleteCategory")
+    public String deleteCategory(@RequestParam("deleteCategory_key") String deleteKeyCategory) {
+        categoryFirebase.deleteCategoryByKey(deleteKeyCategory);
+        return "redirect:/index";
     }
 
     @PostMapping("/updateProduct")
-    public String updateProduct(@RequestParam("update_key") String update_key, Model model) {
+    public String updateProduct(@RequestParam("updateProduct_key") String updateKeyProduct, Model model) {
         thymleafUIModul = new ThymleafUIModul(model);
-        thymleafUIModul.updateShow(productFirebase, update_key);
-        System.out.println("keyList");
-        return "index";
+        thymleafUIModul.showCategories(productFirebase);
+        thymleafUIModul.updateShowProduct(productFirebase, updateKeyProduct);
+        System.out.println("keyList22");
+        return "products";
     }
 
     @PostMapping("/deleteProduct")
-    public String deleteProduct(@RequestParam("delete_key") String delete_key) {
-        productFirebase.deleteByKey(delete_key);
-        return "redirect:/index";
+    public String deleteProduct(@RequestParam("deleteProduct_key") String delete_key) {
+        productFirebase.deleteProductByKey(delete_key);
+        return "redirect:/products";
     }
 }
