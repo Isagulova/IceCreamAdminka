@@ -31,7 +31,7 @@ public class FirebaseServices extends FirebaseConfig {
         CompletableFuture<List<String>> future = new CompletableFuture<>();
         List<String> categories = new ArrayList<>();
 
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference("categories");
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("ice_cream/categories");
 
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -61,7 +61,7 @@ public class FirebaseServices extends FirebaseConfig {
         CompletableFuture<List<String>> future = new CompletableFuture<>();
         List<String> products = new ArrayList<>();
 
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference("products");
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("ice_cream/products");
 
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

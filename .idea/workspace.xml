@@ -5,27 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ffbad4b-529b-491f-8829-efb42d114d65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/model/CategoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index22.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/NewAdminkaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/IceCreamAdminkaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/model/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/model/ProductEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/FirebaseServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/FirebaseServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/modul/ThymleafUIModul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/newProject/services/modul/ThymleafUIModul.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/NewAdminkaApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/model/ProductEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/model/ProductEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/services/FirebaseServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/newProject/services/modul/ThymleafUIModul.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/newProject/services/modul/ThymleafUIModul.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/nicepage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/nicepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/products.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +127,8 @@
       <workItem from="1740745647028" duration="4144000" />
       <workItem from="1740811406925" duration="24048000" />
       <workItem from="1740961196670" duration="4335000" />
-      <workItem from="1740965557129" duration="693000" />
+      <workItem from="1740965557129" duration="1028000" />
+      <workItem from="1740977497902" duration="2410000" />
     </task>
     <servers />
   </component>

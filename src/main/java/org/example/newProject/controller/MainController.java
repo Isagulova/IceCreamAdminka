@@ -17,8 +17,8 @@ import java.io.IOException;
 
 @Controller
 public class MainController {
-    private FirebaseServices categoryFirebase = new FirebaseServices("categories");
-    private FirebaseServices productFirebase = new FirebaseServices("products");
+    private FirebaseServices categoryFirebase = new FirebaseServices("ice_cream/categories");
+    private FirebaseServices productFirebase = new FirebaseServices("ice_cream/products");
     //    private FirebaseServices categoryFirebase = new FirebaseServices("ice_cream/categories");
 //    private FirebaseServices productFirebase = new FirebaseServices("ice_cream/products");
     private ThymleafUIModul thymleafUIModul;
@@ -27,7 +27,7 @@ public class MainController {
     public String getMain(Model model) {
         thymleafUIModul = new ThymleafUIModul(model);
         thymleafUIModul.showCategories(categoryFirebase);
-        return "index";
+        return "categoryAdmin";
     }
 
     @GetMapping("/products")
@@ -35,7 +35,7 @@ public class MainController {
         thymleafUIModul = new ThymleafUIModul(model);
         thymleafUIModul.showProducts(productFirebase);
         thymleafUIModul.showCategories(productFirebase);
-        return "products";
+        return "productAdmin";
     }
 
     @PostMapping("/index")
@@ -63,7 +63,7 @@ public class MainController {
 
         thymleafUIModul = new ThymleafUIModul(model);
         thymleafUIModul.showCategories(categoryFirebase);
-        return "index";
+        return "categoryAdmin";
     }
 
     @PostMapping("/products")
@@ -94,7 +94,7 @@ public class MainController {
 
         thymleafUIModul = new ThymleafUIModul(model);
         thymleafUIModul.showProducts(productFirebase);
-        return "products";
+        return "productAdmin";
     }
 
 
@@ -103,7 +103,7 @@ public class MainController {
         thymleafUIModul = new ThymleafUIModul(model);
         thymleafUIModul.updateShowCategory(categoryFirebase, updateKeyCategory);
         System.out.println("keyList11");
-        return "index";
+        return "categoryAdmin";
     }
 
     @PostMapping("/deleteCategory")
@@ -118,7 +118,7 @@ public class MainController {
         thymleafUIModul.showCategories(productFirebase);
         thymleafUIModul.updateShowProduct(productFirebase, updateKeyProduct);
         System.out.println("keyList22");
-        return "products";
+        return "productAdmin";
     }
 
     @PostMapping("/deleteProduct")
